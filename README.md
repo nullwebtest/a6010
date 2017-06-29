@@ -1,2 +1,2 @@
 # a6010
-Прошивки MiuiPro для Lenovo A6010
+Прошивки Miui для Lenovo A6010
