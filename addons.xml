@@ -10,4 +10,14 @@
             <download-link>https://github.com/nullwebtest/a6010/raw/master/build_prop_my.zip</download-link>
         </addon>         
     </addons> 
+    <addons>
+        <addon>
+            <id>2</id>
+            <name>build.prop2</name>
+            <description>Тут описание аддона2</description>
+            <published-at>20170706</published-at>
+            <size>193024</size>
+            <download-link>https://github.com/nullwebtest/a6010/raw/master/build_prop_my.zip</download-link>
+        </addon>         
+    </addons> 	
 </hash>
