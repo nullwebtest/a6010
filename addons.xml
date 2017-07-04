@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hash>
+    <addons>
+        <addon>
+            <id>1</id>
+            <name>build.prop</name>
+            <description>Тут описание аддона</description>
+            <published-at>20170628</published-at>
+            <size>14365491</size>
+            <download-link>https://github.com/nullwebtest/a6010/raw/master/build_prop_my.zip</download-link>
+        </addon>         
+    </addons> 
+</hash>
