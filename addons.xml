@@ -5,8 +5,8 @@
             <id>1</id>
             <name>build.prop</name>
             <description>Тут описание аддона</description>
-            <published-at>20170628</published-at>
-            <size>14365491</size>
+            <published-at>20170705</published-at>
+            <size>133024</size>
             <download-link>https://github.com/nullwebtest/a6010/raw/master/build_prop_my.zip</download-link>
         </addon>         
     </addons> 
