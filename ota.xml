@@ -10,7 +10,7 @@
   <FileSize type="integer">646421224</FileSize>  <!-- Размер скачиваемого файла, в байтах -->
   <Developer>Tood</Developer> <!-- Ник, имя разработчика'ов -->
   <AddonCount>1</AddonCount>
-  <AddonsURL>https://raw.githubusercontent.com/PepsiMIUI/miuipro/master/addons.xml</AddonsURL>
+  <AddonsURL>https://raw.githubusercontent.com/nullwebtest/a6010/master/addons.xml</AddonsURL>
   <Website nil="false" /> <!-- Web сайт прошивки или чего нибудь другого, на усмотрение -->
   <DonateURL>https://dropbox.com</DonateURL> <!-- Ссылка для установки реквезитов для пожертвований -->
   <Changelog>### Изменения версии MIUI 8 7.6.29
