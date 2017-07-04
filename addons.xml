@@ -2,7 +2,7 @@
 <hash>
     <addons>
         <addon>
-            <id>1</id>
+            <id>0</id>
             <name>build.prop</name>
             <description>Тут описание аддона</description>
             <published-at>20170705</published-at>
