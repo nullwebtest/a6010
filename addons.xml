@@ -12,12 +12,12 @@
     </addons> 
     <addons>
         <addon>
-            <id>2</id>
-            <name>build.prop2</name>
+            <id>3</id>
+            <name>build prop my v2</name>
             <description>Тут описание аддона2</description>
-            <published-at>20170706</published-at>
+            <published-at>20170705</published-at>
             <size>193024</size>
-            <download-link>https://github.com/nullwebtest/a6010/raw/master/build_prop_my.zip</download-link>
+            <download-link>https://github.com/nullwebtest/a6010/blob/master/build_prop_my_v2.zip</download-link>
         </addon>         
     </addons> 	
 </hash>
