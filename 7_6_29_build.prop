@@ -317,7 +317,7 @@ persist.sys.button_jack_profile=volume
 persist.sys.button_jack_switch=0
 dalvik.vm.heapgrowthlimit=96m
 dalvik.vm.heapsize=128m
-ro.com.google.clientidbase=ndroid-lenovo
+ro.com.google.clientidbase=android-lenovo
 persist.sys.miui_feature_config=/system/etc/miui_feature/lite.conf
 
 
