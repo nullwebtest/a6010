@@ -6,7 +6,6 @@
             <name>OTA Updates</name>
             <description>ОТА обновления прошивки от MiuiPRO</description>
             <published-at>20170624</published-at>
-            <CheckMD5>a6cf6e3bd44a34492ea3b0038b66cfcd</CheckMD5> <!-- Контрольный md5 размер файла, для сравнения, полноценности скачаного файла -->
             <size>4448256</size>
             <download-link>https://github.com/nullwebtest/a6010/raw/master/OTA_for_7.6.22.zip</download-link>
         </addon>         
