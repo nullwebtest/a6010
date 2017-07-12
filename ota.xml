@@ -4,7 +4,7 @@
   <VersionName>7.7.6</VersionName> <!-- Версия прошивки и её название при скачивании, без пробелов -->
   <VersionNumber type="integer">20170708</VersionNumber> <!-- Версия прошивки для ota, в новой версии ставить версию больше 20160203 -->
   <DirectUrl>http://nullwebtest.ru/miuipro_Kraft-A6010_v5.1.1_7.7.6_by_tood.zip</DirectUrl> <!-- Прямая ссылка на файл, для скачивания, лучше использовать прямую -->
-  <HttpUrl>http://nullwebtest.ru/miuipro_Kraft-A6010_v5.1.1_7.7.6_by_tood.zip</HttpUrl> <!-- Ссылка на файл, для скачивания через браузер, лучше использовать прямую -->
+ <!-- <HttpUrl>http://nullwebtest.ru/miuipro_Kraft-A6010_v5.1.1_7.7.6_by_tood.zip</HttpUrl>  Ссылка на файл, для скачивания через браузер, лучше использовать прямую -->
   <Android>5.1.1</Android> <!-- Версия android, смотреть в buld.prop или настройках прошивки -->
   <CheckMD5>0c620e415973a045b0f707e5e26b9dc4</CheckMD5> <!-- Контрольный md5 размер файла, для сравнения, полноценности скачаного файла -->
   <FileSize type="integer">651583488</FileSize>  <!-- Размер скачиваемого файла, в байтах -->
