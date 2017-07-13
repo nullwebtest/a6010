@@ -3,11 +3,11 @@
     <addons>
         <addon>
             <id>1</id>
-            <name>ОТА обновления прошивки от MiuiPRO</name>
-            <description>Актуально только для MiuiPRO 7.6.22</description>
-            <published-at>20170624</published-at>
-            <size>4448256</size>
-            <download-link>https://github.com/nullwebtest/a6010/raw/master/OTA_for_7.6.x.zip</download-link>
+            <name>TWRP 3.1.0-Х для Lenovo A6010</name>
+            <description>Рекомендуется!</description>
+            <published-at>20170714</published-at>
+            <size>13589268</size>
+            <download-link>http://lenovo-forums.ru/applications/core/interface/file/attachment.php?id=69960</download-link>
         </addon>         
     </addons>  	
 </hash>
