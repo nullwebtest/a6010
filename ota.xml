@@ -6,7 +6,7 @@
   <DirectUrl>http://nullwebtest.ru/miuipro_Kraft-A6010_v5.1.1_7.7.6_by_tood.zip</DirectUrl> <!-- Прямая ссылка на файл, для скачивания, лучше использовать прямую -->
   <HttpUrl>http://nullwebtest.ru/miuipro_Kraft-A6010_v5.1.1_7.7.6_by_tood.zip</HttpUrl> <!-- Ссылка на файл, для скачивания через браузер, лучше использовать прямую -->
   <Android>5.1.1</Android> <!-- Версия android, смотреть в buld.prop или настройках прошивки -->
-  <CheckMD5>0c620e415973a045b0f707e5e26b9dc4</CheckMD5> <!-- Контрольный md5 размер файла, для сравнения, полноценности скачаного файла -->
+  <CheckMD5>beeb3dd4a8a460dc33dd7bbfedf90473</CheckMD5> <!-- Контрольный md5 размер файла, для сравнения, полноценности скачаного файла -->
   <FileSize type="integer">651583488</FileSize>  <!-- Размер скачиваемого файла, в байтах -->
   <Developer>Tood</Developer> <!-- Ник, имя разработчика'ов -->
   <AddonCount>1</AddonCount>
@@ -14,5 +14,6 @@
   <WebsiteURL>https://vk.com/lenovoa6010miui</WebsiteURL> <!-- Web сайт прошивки или чего нибудь другого, на усмотрение -->
   <Changelog>### Список изменений MiuiPro 7.7.6
   * Включены обновления по воздуху
+  * Добавил дополнительные функции в камере
 </Changelog> <!-- Список изменений, новой версии прошивки, пишем что нужно -->
 </ROM>
