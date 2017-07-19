@@ -13,6 +13,7 @@
   <AddonsURL>https://raw.githubusercontent.com/nullwebtest/a6010/master/addons.xml</AddonsURL>
   <WebsiteURL>https://vk.com/lenovoa6010miui</WebsiteURL> <!-- Web сайт прошивки или чего нибудь другого, на усмотрение -->
   <Changelog>### Список изменений MiuiPro 7.7.13
+    Исправлено:
     * Точка доступа Wi-fi
 </Changelog> <!-- Список изменений, новой версии прошивки, пишем что нужно -->
 </ROM>
