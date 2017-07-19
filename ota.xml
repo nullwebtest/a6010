@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ROM>
   <RomName>miuipro_v5.1.1_Kraft-A6010</RomName> <!-- Название прошивки -->
-  <VersionName>miuipro_v5.1.1_Kraft-A6010_v7.7.6</VersionName> <!-- Версия прошивки и её название при скачивании, без пробелов -->
+  <VersionName>miuipro_v5.1.1_Kraft-A6010_v7.7.13</VersionName> <!-- Версия прошивки и её название при скачивании, без пробелов -->
   <VersionNumber type="integer">20170713</VersionNumber> <!-- Версия прошивки для ota, в новой версии ставить версию больше 20160203 -->
   <DirectUrl>http://nullwebtest.ru/miuipro_Kraft-A6010_v5.1.1_7.7.13_by_tood.zip</DirectUrl> <!-- Прямая ссылка на файл, для скачивания, лучше использовать прямую -->
   <HttpUrl>http://nullwebtest.ru/miuipro_Kraft-A6010_v5.1.1_7.7.13_by_tood.zip</HttpUrl> <!-- Ссылка на файл, для скачивания через браузер, лучше использовать прямую -->
