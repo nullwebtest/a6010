@@ -7,7 +7,7 @@
   <HttpUrl>http://nullwebtest.ru/miuipro_Kraft-A6010_v5.1.1_7.7.13_by_tood.zip</HttpUrl> <!-- Ссылка на файл, для скачивания через браузер, лучше использовать прямую -->
   <Android>5.1.1</Android> <!-- Версия android, смотреть в buld.prop или настройках прошивки -->
   <CheckMD5>7f37ad2ca34df0f8f86ffeba262737ad</CheckMD5> <!-- Контрольный md5 размер файла, для сравнения, полноценности скачаного файла -->
-  <FileSize type="integer">651583488</FileSize>  <!-- Размер скачиваемого файла, в байтах -->
+  <FileSize type="integer">653209600</FileSize>  <!-- Размер скачиваемого файла, в байтах -->
   <Developer>tood</Developer> <!-- Ник, имя разработчика'ов -->
   <AddonCount>1</AddonCount>
   <AddonsURL>https://raw.githubusercontent.com/nullwebtest/a6010/master/addons.xml</AddonsURL>
