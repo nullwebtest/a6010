@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ROM>
   <RomName>miuipro_v5.1.1_Kraft-A6010</RomName> <!-- Название прошивки -->
-  <VersionName>miuipro_v5.1.1_Kraft-A6010_v7.7.13</VersionName> <!-- Версия прошивки и её название при скачивании, без пробелов -->
-  <VersionNumber type="integer">20170713</VersionNumber> <!-- Версия прошивки для ota, в новой версии ставить версию больше 20160203 -->
-  <DirectUrl>http://nullwebtest.ru/miuipro_Kraft-A6010_v5.1.1_7.7.13_by_tood.zip</DirectUrl> <!-- Прямая ссылка на файл, для скачивания, лучше использовать прямую -->
-  <HttpUrl>http://nullwebtest.ru/miuipro_Kraft-A6010_v5.1.1_7.7.13_by_tood.zip</HttpUrl> <!-- Ссылка на файл, для скачивания через браузер, лучше использовать прямую -->
+  <VersionName>miuipro_v5.1.1_Kraft-A6010_v7.7.20</VersionName> <!-- Версия прошивки и её название при скачивании, без пробелов -->
+  <VersionNumber type="integer">20170720</VersionNumber> <!-- Версия прошивки для ota, в новой версии ставить версию больше 20160203 -->
+  <DirectUrl>http://nullwebtest.ru/miuipro_Kraft-A6010_v5.1.1_7.7.20_by_tood.zip</DirectUrl> <!-- Прямая ссылка на файл, для скачивания, лучше использовать прямую -->
+  <HttpUrl>http://nullwebtest.ru/miuipro_Kraft-A6010_v5.1.1_7.7.20_by_tood.zip</HttpUrl> <!-- Ссылка на файл, для скачивания через браузер, лучше использовать прямую -->
   <Android>5.1.1</Android> <!-- Версия android, смотреть в buld.prop или настройках прошивки -->
-  <CheckMD5>7f37ad2ca34df0f8f86ffeba262737ad</CheckMD5> <!-- Контрольный md5 размер файла, для сравнения, полноценности скачаного файла -->
-  <FileSize type="integer">653209600</FileSize>  <!-- Размер скачиваемого файла, в байтах -->
+  <CheckMD5>84bee0bc6c40785bcde05229d3705cba</CheckMD5> <!-- Контрольный md5 размер файла, для сравнения, полноценности скачаного файла -->
+  <FileSize type="integer">650063872</FileSize>  <!-- Размер скачиваемого файла, в байтах -->
   <Developer>tood</Developer> <!-- Ник, имя разработчика'ов -->
   <AddonCount>1</AddonCount>
   <AddonsURL>https://raw.githubusercontent.com/nullwebtest/a6010/master/addons.xml</AddonsURL>
   <WebsiteURL>https://vk.com/lenovoa6010miui</WebsiteURL> <!-- Web сайт прошивки или чего нибудь другого, на усмотрение -->
-  <Changelog>### Список изменений MiuiPro 7.7.13
+  <Changelog>### Список изменений MiuiPro 7.7.20
+    Добавлено:
+    * жесты в любом месте
+    * анимация и интерполяция списков
+    * звук отчета о доставке sms
+    * настройки мигания фонарика при звонке (Android 5 и 6)
+    * уменьшение энергопотребления и повышение производительности (Android 7)
+    
+    Обновлено:
+    * Gboard
+    * погода
+    * иконки
+    * busybox
+    
     Исправлено:
-    * Точка доступа Wi-fi
+    * ускоритель игр в «Безопасность» (Android 7)
+    * вылет при выборе дней в задачах (Android 7)
+    * GPS
+    * иконка Yandex в браузере для экранов xhdpi
+    * анимация загрузки
+    * перевод
 </Changelog> <!-- Список изменений, новой версии прошивки, пишем что нужно -->
 </ROM>
