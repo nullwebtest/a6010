@@ -12,5 +12,5 @@
   <AddonCount>1</AddonCount>
   <AddonsURL>https://raw.githubusercontent.com/nullwebtest/a6010/master/addons.xml</AddonsURL>
   <WebsiteURL>https://vk.com/lenovoa6010miui</WebsiteURL> <!-- Web сайт прошивки или чего нибудь другого, на усмотрение -->
-  <ChangelogUrl>https://github.com/nullwebtest/a6010/blob/master/Changelog.mkdn</ChangelogUrl>
+  <Changelog>https://github.com/nullwebtest/a6010/blob/master/Changelog.mkdn</Changelog>
 </ROM>
