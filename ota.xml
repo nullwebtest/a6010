@@ -13,26 +13,4 @@
   <AddonsURL>https://raw.githubusercontent.com/nullwebtest/a6010/master/addons.xml</AddonsURL>
   <WebsiteURL>https://vk.com/lenovoa6010miui</WebsiteURL> <!-- Web сайт прошивки или чего нибудь другого, на усмотрение -->
   <ChangelogUrl>https://github.com/nullwebtest/a6010/blob/master/Changelog.mkdn</ChangelogUrl>
-  <Changelog>### Список изменений MiuiPro 7.7.20
-    Добавлено:
-    * жесты в любом месте
-    * анимация и интерполяция списков
-    * звук отчета о доставке sms
-    * настройки мигания фонарика при звонке (Android 5 и 6)
-    * уменьшение энергопотребления и повышение производительности (Android 7)
-    
-    Обновлено:
-    * Gboard
-    * погода
-    * иконки
-    * busybox
-    
-    Исправлено:
-    * ускоритель игр в «Безопасность» (Android 7)
-    * вылет при выборе дней в задачах (Android 7)
-    * GPS
-    * иконка Yandex в браузере для экранов xhdpi
-    * анимация загрузки
-    * перевод
-</Changelog> <!-- Список изменений, новой версии прошивки, пишем что нужно -->
 </ROM>
