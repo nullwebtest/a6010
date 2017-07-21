@@ -12,6 +12,10 @@
   <AddonCount>1</AddonCount>
   <AddonsURL>https://raw.githubusercontent.com/nullwebtest/a6010/master/addons.xml</AddonsURL>
   <WebsiteURL>https://vk.com/lenovoa6010miui</WebsiteURL> <!-- Web сайт прошивки или чего нибудь другого, на усмотрение -->
+  <ChangelogUrl
+                id="changelog"
+                title="Changelog"
+                description="View Changelog">https://github.com/nullwebtest/a6010/blob/master/Changelog.mkdn</ChangelogUrl>
   <Changelog>### Список изменений MiuiPro 7.7.20
     Добавлено:
     * жесты в любом месте
