@@ -15,16 +15,16 @@
    Заходим в созданную папку и выполняем ряд команд:
 
 1. Делаем файл extract-ikconfig исполняемым
-   > sudo chmod a+x extract-ikconfig
+> sudo chmod a+x extract-ikconfig
    
   2.1. Извлекаем конфигурационный файл из boot.img
-   > ./extract-ikconfig boot.img > config
+  > ./extract-ikconfig boot.img > config
    
 2.2. Извлекаем конфигурационный файл из zImage
-   > ./extract-ikconfig zImage > config
+> ./extract-ikconfig zImage > config
    
 3. Копируем конфигурационный файл в папку с исходным кодом ядра:
-   > cp config /path/kernel/.config
+> cp config /path/kernel/.config
 
     Где path - путь до папки с исходным кодом ядра.
 
