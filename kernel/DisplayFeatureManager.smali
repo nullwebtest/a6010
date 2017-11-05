@@ -50,7 +50,23 @@
 
 
 # instance fields
+.field public blue:[Ljava/lang/String;
+
+.field public count:I
+
+.field level:I
+
+.field line:Ljava/lang/String;
+
 .field private mProxy:Lmiui/hareware/display/DisplayFeatureServiceProxy;
+
+.field old_blue:Ljava/lang/String;
+
+.field path:Ljava/lang/String;
+
+.field rgb_old:[Ljava/lang/String;
+
+.field toogle_state:Z
 
 
 # direct methods
@@ -74,7 +90,10 @@
 .end method
 
 .method private constructor <init>()V
-    .registers 3
+    .registers 5
+
+    .prologue
+    const/4 v3, 0x0
 
     .prologue
     .line 40
@@ -89,7 +108,7 @@
 
     .line 42
     .local v0, "b":Landroid/os/IBinder;
-    if-eqz v0, :cond_12
+    if-eqz v0, :cond_13
 
     .line 43
     new-instance v1, Lmiui/hareware/display/DisplayFeatureServiceProxy;
@@ -99,7 +118,81 @@
     iput-object v1, p0, Lmiui/hareware/display/DisplayFeatureManager;->mProxy:Lmiui/hareware/display/DisplayFeatureServiceProxy;
 
     .line 45
-    :cond_12
+    .line 19
+    :cond_13
+    const-string v0, " "
+
+    iput-object v0, p0, Lmiui/hareware/display/DisplayFeatureManager;->old_blue:Ljava/lang/String;
+
+    .line 21
+    const-string v0, "/sys/devices/platform/kcal_ctrl.0/kcal"
+
+    iput-object v0, p0, Lmiui/hareware/display/DisplayFeatureManager;->path:Ljava/lang/String;
+
+    .line 23
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lmiui/hareware/display/DisplayFeatureManager;->rgb_old:[Ljava/lang/String;
+
+    .line 24
+    iput v3, p0, Lmiui/hareware/display/DisplayFeatureManager;->level:I
+
+    .line 25
+    const/16 v0, 0x8
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    const-string v1, "220"
+
+    aput-object v1, v0, v3
+
+    const/4 v1, 0x1
+
+    const-string v2, "205"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x2
+
+    const-string v2, "190"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x3
+
+    const-string v2, "175"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x4
+
+    const-string v2, "160"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x5
+
+    const-string v2, "145"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x6
+
+    const-string v2, "130"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x7
+
+    const-string v2, "125"
+
+    aput-object v2, v0, v1
+
+    iput-object v0, p0, Lmiui/hareware/display/DisplayFeatureManager;->blue:[Ljava/lang/String;
+
+    .line 27
+    iput v3, p0, Lmiui/hareware/display/DisplayFeatureManager;->count:I
+
     return-void
 .end method
 
@@ -313,6 +406,373 @@
 
 
 # virtual methods
+.method public RMcontrol(ZLjava/lang/String;)V
+    .registers 12
+    .param p1, "z"    # Z
+    .param p2, "b"    # Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/FileNotFoundException;,
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .prologue
+    const/4 v6, 0x1
+
+    .line 54
+    const/4 v5, 0x0
+
+    .line 55
+    :try_start_2
+    new-instance v1, Ljava/io/FileInputStream;
+
+    iget-object v4, p0, Lmiui/hareware/display/DisplayFeatureManager;->path:Ljava/lang/String;
+
+    invoke-direct {v1, v4}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
+    :try_end_9
+    .catchall {:try_start_2 .. :try_end_9} :catchall_99
+
+    .line 56
+    .local v1, "fis":Ljava/io/InputStream;
+    :try_start_9
+    new-instance v2, Ljava/io/InputStreamReader;
+
+    const-string v4, "UTF-8"
+
+    invoke-static {v4}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+
+    move-result-object v4
+
+    invoke-direct {v2, v1, v4}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
+    :try_end_14
+    .catchall {:try_start_9 .. :try_end_14} :catchall_8f
+
+    .line 57
+    .local v2, "isr":Ljava/io/InputStreamReader;
+    :try_start_14
+    new-instance v0, Ljava/io/BufferedReader;
+
+    invoke-direct {v0, v2}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
+    :try_end_19
+    .catchall {:try_start_14 .. :try_end_19} :catchall_ea
+
+    .line 60
+    .local v0, "br":Ljava/io/BufferedReader;
+    if-eqz p1, :cond_9d
+
+    .line 61
+    :try_start_1b
+    iget v4, p0, Lmiui/hareware/display/DisplayFeatureManager;->count:I
+
+    if-ge v4, v6, :cond_2d
+
+    .line 62
+    iget v4, p0, Lmiui/hareware/display/DisplayFeatureManager;->count:I
+
+    add-int/lit8 v4, v4, 0x1
+
+    iput v4, p0, Lmiui/hareware/display/DisplayFeatureManager;->count:I
+
+    .line 63
+    :goto_25
+    invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
+
+    move-result-object v4
+
+    iput-object v4, p0, Lmiui/hareware/display/DisplayFeatureManager;->line:Ljava/lang/String;
+
+    if-nez v4, :cond_70
+
+    .line 66
+    :cond_2d
+    invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
+
+    .line 67
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    iget-object v6, p0, Lmiui/hareware/display/DisplayFeatureManager;->rgb_old:[Ljava/lang/String;
+
+    const/4 v7, 0x0
+
+    aget-object v6, v6, v7
+
+    invoke-static {v6}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-direct {v4, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v6, " "
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    iget-object v6, p0, Lmiui/hareware/display/DisplayFeatureManager;->rgb_old:[Ljava/lang/String;
+
+    const/4 v7, 0x1
+
+    aget-object v6, v6, v7
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v6, " "
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 68
+    .local v3, "rgb":Ljava/lang/String;
+    iget-object v4, p0, Lmiui/hareware/display/DisplayFeatureManager;->path:Ljava/lang/String;
+
+    invoke-static {v4, v3}, Landroid/miui/Shell;->write(Ljava/lang/String;Ljava/lang/String;)Z
+    :try_end_60
+    .catchall {:try_start_1b .. :try_end_60} :catchall_7b
+
+    .line 77
+    .end local v3    # "rgb":Ljava/lang/String;
+    :cond_60
+    :goto_60
+    if-eqz v0, :cond_65
+
+    :try_start_62
+    invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
+    :try_end_65
+    .catchall {:try_start_62 .. :try_end_65} :catchall_ea
+
+    :cond_65
+    if-eqz v2, :cond_6a
+
+    :try_start_67
+    invoke-virtual {v2}, Ljava/io/InputStreamReader;->close()V
+    :try_end_6a
+    .catchall {:try_start_67 .. :try_end_6a} :catchall_8f
+
+    :cond_6a
+    if-eqz v1, :cond_6f
+
+    :try_start_6c
+    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
+    :try_end_6f
+    .catchall {:try_start_6c .. :try_end_6f} :catchall_99
+
+    .line 79
+    :cond_6f
+    return-void
+
+    .line 64
+    :cond_70
+    :try_start_70
+    iget-object v4, p0, Lmiui/hareware/display/DisplayFeatureManager;->line:Ljava/lang/String;
+
+    const-string v6, " "
+
+    invoke-virtual {v4, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v4
+
+    iput-object v4, p0, Lmiui/hareware/display/DisplayFeatureManager;->rgb_old:[Ljava/lang/String;
+    :try_end_7a
+    .catchall {:try_start_70 .. :try_end_7a} :catchall_7b
+
+    goto :goto_25
+
+    .line 77
+    :catchall_7b
+    move-exception v4
+
+    if-eqz v0, :cond_81
+
+    :try_start_7e
+    invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
+
+    :cond_81
+    throw v4
+    :try_end_82
+    .catchall {:try_start_7e .. :try_end_82} :catchall_82
+
+    :catchall_82
+    move-exception v5
+
+    move-object v8, v5
+
+    move-object v5, v4
+
+    move-object v4, v8
+
+    .end local v0    # "br":Ljava/io/BufferedReader;
+    :goto_86
+    if-nez v5, :cond_d7
+
+    move-object v5, v4
+
+    :cond_89
+    :goto_89
+    if-eqz v2, :cond_8e
+
+    :try_start_8b
+    invoke-virtual {v2}, Ljava/io/InputStreamReader;->close()V
+
+    :cond_8e
+    throw v5
+    :try_end_8f
+    .catchall {:try_start_8b .. :try_end_8f} :catchall_8f
+
+    .end local v2    # "isr":Ljava/io/InputStreamReader;
+    :catchall_8f
+    move-exception v4
+
+    if-nez v5, :cond_dd
+
+    move-object v5, v4
+
+    :cond_93
+    :goto_93
+    if-eqz v1, :cond_98
+
+    :try_start_95
+    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
+
+    :cond_98
+    throw v5
+    :try_end_99
+    .catchall {:try_start_95 .. :try_end_99} :catchall_99
+
+    .end local v1    # "fis":Ljava/io/InputStream;
+    :catchall_99
+    move-exception v4
+
+    if-nez v5, :cond_e3
+
+    :goto_9c
+    throw v4
+
+    .line 71
+    .restart local v0    # "br":Ljava/io/BufferedReader;
+    .restart local v1    # "fis":Ljava/io/InputStream;
+    .restart local v2    # "isr":Ljava/io/InputStreamReader;
+    :cond_9d
+    :try_start_9d
+    iget-object v4, p0, Lmiui/hareware/display/DisplayFeatureManager;->rgb_old:[Ljava/lang/String;
+
+    if-eqz v4, :cond_60
+
+    .line 72
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    iget-object v6, p0, Lmiui/hareware/display/DisplayFeatureManager;->rgb_old:[Ljava/lang/String;
+
+    const/4 v7, 0x0
+
+    aget-object v6, v6, v7
+
+    invoke-static {v6}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-direct {v4, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v6, " "
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    iget-object v6, p0, Lmiui/hareware/display/DisplayFeatureManager;->rgb_old:[Ljava/lang/String;
+
+    const/4 v7, 0x1
+
+    aget-object v6, v6, v7
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v6, " "
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    iget-object v6, p0, Lmiui/hareware/display/DisplayFeatureManager;->rgb_old:[Ljava/lang/String;
+
+    const/4 v7, 0x2
+
+    aget-object v6, v6, v7
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 73
+    .restart local v3    # "rgb":Ljava/lang/String;
+    iget-object v4, p0, Lmiui/hareware/display/DisplayFeatureManager;->path:Ljava/lang/String;
+
+    invoke-static {v4, v3}, Landroid/miui/Shell;->write(Ljava/lang/String;Ljava/lang/String;)Z
+    :try_end_d6
+    .catchall {:try_start_9d .. :try_end_d6} :catchall_7b
+
+    goto :goto_60
+
+    .line 77
+    .end local v0    # "br":Ljava/io/BufferedReader;
+    .end local v3    # "rgb":Ljava/lang/String;
+    :cond_d7
+    if-eq v5, v4, :cond_89
+
+    :try_start_d9
+    invoke-virtual {v5, v4}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+    :try_end_dc
+    .catchall {:try_start_d9 .. :try_end_dc} :catchall_8f
+
+    goto :goto_89
+
+    .end local v2    # "isr":Ljava/io/InputStreamReader;
+    :cond_dd
+    if-eq v5, v4, :cond_93
+
+    :try_start_df
+    invoke-virtual {v5, v4}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+    :try_end_e2
+    .catchall {:try_start_df .. :try_end_e2} :catchall_99
+
+    goto :goto_93
+
+    .end local v1    # "fis":Ljava/io/InputStream;
+    :cond_e3
+    if-eq v5, v4, :cond_e8
+
+    invoke-virtual {v5, v4}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+
+    :cond_e8
+    move-object v4, v5
+
+    goto :goto_9c
+
+    .restart local v1    # "fis":Ljava/io/InputStream;
+    .restart local v2    # "isr":Ljava/io/InputStreamReader;
+    :catchall_ea
+    move-exception v4
+
+    goto :goto_86
+.end method
+
 .method public getColorPrefer()I
     .registers 3
 
@@ -407,6 +867,57 @@
     move-result v0
 
     return v0
+.end method
+
+.method public s0bes(I)V
+    .registers 5
+    .param p1, "param"    # I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Throwable;
+        }
+    .end annotation
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 31
+    if-eqz p1, :cond_12
+
+    .line 32
+    iput p1, p0, Lmiui/hareware/display/DisplayFeatureManager;->level:I
+
+    .line 33
+    const/4 v0, 0x1
+
+    iget-object v1, p0, Lmiui/hareware/display/DisplayFeatureManager;->blue:[Ljava/lang/String;
+
+    iget v2, p0, Lmiui/hareware/display/DisplayFeatureManager;->level:I
+
+    add-int/lit8 v2, v2, -0x1
+
+    aget-object v1, v1, v2
+
+    invoke-virtual {p0, v0, v1}, Lmiui/hareware/display/DisplayFeatureManager;->RMcontrol(ZLjava/lang/String;)V
+
+    .line 38
+    :goto_11
+    return-void
+
+    .line 35
+    :cond_12
+    iput v2, p0, Lmiui/hareware/display/DisplayFeatureManager;->level:I
+
+    .line 36
+    iget-object v0, p0, Lmiui/hareware/display/DisplayFeatureManager;->blue:[Ljava/lang/String;
+
+    iget v1, p0, Lmiui/hareware/display/DisplayFeatureManager;->level:I
+
+    aget-object v0, v0, v1
+
+    invoke-virtual {p0, v2, v0}, Lmiui/hareware/display/DisplayFeatureManager;->RMcontrol(ZLjava/lang/String;)V
+
+    goto :goto_11
 .end method
 
 .method public setAdEnable(Z)V
@@ -566,7 +1077,7 @@
 
     invoke-direct {p0, v0, v3, p1}, Lmiui/hareware/display/DisplayFeatureManager;->setDefaultMode(Landroid/os/IBinder;II)I
     :try_end_1f
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1f} :catch_29
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1f} :catch_2c
 
     .line 94
     .end local v0    # "colorService":Landroid/os/IBinder;
@@ -581,10 +1092,12 @@
     invoke-static {v3, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 95
+    invoke-virtual {p0, p1}, Lmiui/hareware/display/DisplayFeatureManager;->s0bes(I)V
+
     return-void
 
     .line 90
-    :catch_29
+    :catch_2c
     move-exception v1
 
     .line 91
